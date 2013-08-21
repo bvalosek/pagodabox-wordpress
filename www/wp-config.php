@@ -12,7 +12,7 @@ if (isset($_SERVER['PLATFORM']) && $_SERVER['PLATFORM'] == 'PAGODABOX') {
 
 // otherwise, local testing stuff
 } else {
-    define('DB_NAME', 'charfen-labs');
+    define('DB_NAME', 'wp');
     define('DB_USER', 'root');
     define('DB_PASSWORD', 'root');
     define('DB_HOST', '127.0.0.1');
@@ -37,6 +37,8 @@ define('DISALLOW_FILE_MODS', true);
 // Change content to root directry, hashtag hacks
 define('WP_CONTENT_DIR', $_SERVER['DOCUMENT_ROOT']);
 define('WP_CONTENT_URL', '');
+
+define('WP_DEFAULT_THEME', 'twentytwelve');
 
 // salt
 define('AUTH_KEY',         'N<OC:7t0ufRk>yaS|G!eki:QPec!P[Ah/|t${<A2$G>G!PKx;.i;~K $[u|%M]`$');
