@@ -1,0 +1,5 @@
+web1:
+    name: web
+    path: www
+    shared_writable_dirs:
+        - uploads
