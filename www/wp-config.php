@@ -3,11 +3,22 @@
 // ---------------------------------------------------------------------------------
 // enviroment settings
 
-// db
-define('DB_NAME', 'charfen-labs');
-define('DB_USER', 'root');
-define('DB_PASSWORD', 'root');
-define('DB_HOST', '127.0.0.1');
+// Ensure that if we're on pagoda, we use our auto-populated info
+if (isset($_SERVER['PLATFORM']) && $_SERVER['PLATFORM'] == 'PAGODABOX') {
+    define('DB_NAME', $_SERVER['DB1_NAME']);
+    define('DB_USER', $_SERVER['DB1_USER']);
+    define('DB_PASSWORD', $_SERVER['DB1_PASS']);
+    define ('DB_HOST', $_SERVER['DB1_HOST'] . ':' . $_SERVER['DB1_PORT']);
+
+// otherwise, local testing stuff
+} else {
+    define('DB_NAME', 'charfen-labs');
+    define('DB_USER', 'root');
+    define('DB_PASSWORD', 'root');
+    define('DB_HOST', '127.0.0.1');
+}
+
+// Common settings
 define('DB_CHARSET', 'utf8');
 define('DB_COLLATE', '');
 
