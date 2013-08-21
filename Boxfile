@@ -6,7 +6,7 @@ web1:
     name: web
     document_root: www
     shared_writable_dirs:
-        - uploads
+        - www/uploads
 db1:
     name: db
     type: mysql
