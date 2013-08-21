@@ -1,5 +1,8 @@
 web1:
     name: web
-    path: www
+    document_root: www
     shared_writable_dirs:
         - uploads
+db1:
+    name: db
+    type: mysql
