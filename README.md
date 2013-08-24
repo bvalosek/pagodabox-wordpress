@@ -1,6 +1,11 @@
 ## Wordpress via Pagoda Box
 
-This Wordpress app is intended to be deployed onto [Pagoda
+Deploy Wordpress *literally* three seconds. Embrace the PaaS-ness. Wordpress
+3.6 cocked, locked, and ready to rock.
+
+## What?
+
+This is a Wordpress base intended to be deployed onto [Pagoda
 Box](https://pagodabox.com/), a robust PHP Platform-as-a-Service provider.
 Because of this, there are few differences from a typical Wordpress install.
 
@@ -53,5 +58,8 @@ Here is the setup inside the `www` directory:
   and more transparency into code changes, the plugins and themes directory
   have been moved outside of the framework directory.
 
-**TL;DR**: Put all plugins in `www/plugins`, all themes in `www/themes`, and
-don't touch anything else.
+### TL;DR
+
+Put all plugins in `www/plugins`, all themes in `www/themes`, and
+don't touch anything else. Deploy your site with zero down time and hassle-free
+vertical or horizontal scaling.
