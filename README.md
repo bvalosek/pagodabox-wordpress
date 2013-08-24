@@ -12,14 +12,32 @@ Because of this, there are few differences from a typical Wordpress install.
   [tunnel in](http://help.pagodabox.com/customer/portal/articles/175427) to use
   e.g. MySQL Workbench.
 
+### Getting Started
+
+* Fork this this repo, drop your plugins into `www/plugins` and themes into
+  `www/themes`, and deploy to Pagoda Box. Real Simple Stuff.
+
+#### Via creating a new app
+
+* Add a New Application in your Pagoda Box dashboard
+* Select "Clone an existing repo"
+* Give it a great name.
+* Enter `https://github.com/bvalosek/pagodabox-wordpress.git` as the "Clone URL"
+* Let the infastructure build.
+* Clone your app locally `git clone git@git.pagodabox.com:my-app-name.git`
+* All subsequent pushes will re-deploy your site.
+
 ### Folder Structure
 
 The Wordpress site is hosted out of the `www` directory. This is the
 `document_root` for the first web component on Pagoda Box.
 
 The `wp-config.php`, `index.php`, and `.htaccess` are all setup to allow for a
-slightly different organization of the Wordpress files. Here is the setup
-inside the `www` directory:
+slightly different organization of the Wordpress files. This is all done to
+make the directory structure a little more obvious, as well as not require you
+to drop your files into the framework directory.
+
+Here is the setup inside the `www` directory:
 
 * `plugins/`: New location for all plugins. Relocated `wp-content/plugins`
   directory. Put all plugins here.
